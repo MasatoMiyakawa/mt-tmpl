@@ -1,0 +1,13 @@
+<MTIf name="preview_template">
+	<MTIgnore>Preview</MTIgnore>
+  <$mt:EntryBody mteval="1"$>
+</MTIf>
+<MTUnless name="preview_template">
+	<MTIgnore>Publish ※If you use Page Bute Plugin.</MTIgnore>
+	<MTPageContents count="1">
+	  <$mt:EntryBody mteval="1"$>
+	</MTPageContents>
+  <MTIfPageBefore><$MTPageBefore delim="BACK"$></MTIfPageBefore>
+  <$MTPageLists$>
+  <MTIfPageNext><$MTPageNext delim="NEXT"$></MTIfPageNext>
+</MTUnless>
